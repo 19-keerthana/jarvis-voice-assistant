@@ -1,0 +1,5 @@
+SpeechRecognition
+PyAudio
+Pyttsx3
+customtkinter
+requests
