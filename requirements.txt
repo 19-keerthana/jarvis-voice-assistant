@@ -1,5 +1,6 @@
 SpeechRecognition
 PyAudio
-Pyttsx3
+pyttsx3
 customtkinter
 requests
+vosk
