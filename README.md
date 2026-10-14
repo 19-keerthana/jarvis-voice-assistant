@@ -1,40 +1,115 @@
-\# J.A.R.V.I.S. Personal Voice Assistant
+# J.A.R.V.I.S. — Personal Voice Assistant
 
+A Python desktop voice assistant featuring a modern dark-themed GUI, offline speech recognition, local AI responses, text-to-speech, and productivity commands.
 
+## Features
 
-A modern, dark-themed local AI desktop assistant built with Python. All systems run completely privately and offline using local AI models.
+- **Modern GUI:** Dark-themed desktop interface built with CustomTkinter.
+- **Offline speech recognition:** Uses Vosk with a downloaded local speech model.
+- **Local AI:** Integrates with Ollama and the Llama 3.2 model.
+- **Text-to-speech:** Uses pyttsx3 to speak responses.
+- **Productivity commands:** Supports time, date, notes, and other built-in commands.
+- **Web search:** Opens Google Search when requested.
 
+## Technology Stack
 
+- Python 3.13
+- Vosk
+- SpeechRecognition
+- PyAudio
+- pyttsx3
+- CustomTkinter
+- Requests
+- Ollama with Llama 3.2
 
-\## 🚀 Features
+## Prerequisites
 
-\- \*\*Offline Speech Recognition:\*\* Powered by Vosk.
+- Python 3.13
+- Git
+- A working microphone for voice input
+- A compatible Vosk speech model
+- Ollama for local AI responses
 
-\- \*\*Local AI Engine:\*\* Communicates with Ollama (Llama 3.2).
+## Installation
 
-\- \*\*Offline Voice Engine:\*\* Text-to-speech rendering via pyttsx3.
+Clone the repository:
 
-\- \*\*Modern GUI:\*\* Built with CustomTkinter.
+```bash
+git clone https://github.com/19-keerthana/jarvis-voice-assistant/tree/main
+cd jarvis-voice-assistant
+```
 
-\- \*\*Local Commands:\*\* Time, Date, Notes, and Google Search automation.
+Create a virtual environment on Windows:
 
+```powershell
+py -3.13 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
+Install the Python dependencies:
 
-\## 🛠️ Setup Instructions
+```bash
+python -m pip install -r requirements.txt
+```
 
-1\. Clone the repository.
+## Configure Vosk
 
-2\. Set up your virtual environment: `py -3.13 -m venv .venv`
+Download a compatible speech-recognition model from the official Vosk website:
 
-3\. Activate it: `.venv\\Scripts\\activate`
+https://alphacephei.com/vosk/models
 
-4\. Install packages: `python -m pip install -r requirements.txt`
+Extract the model into the directory expected by `main.py`. The folder name and location must match the path used in your code.
 
-5\. Download a Vosk model and place it inside a folder named `/model`.
+## Configure Ollama
 
-6\. Make sure Ollama is running Llama 3.2 locally.
+Install Ollama from:
 
-7\. Run the application: `python main.py`
+https://ollama.com/download
 
+Download the model:
 
+```bash
+ollama pull llama3.2
+```
 
+Make sure Ollama is running before using the local AI feature.
+
+## Run the Application
+
+Activate your virtual environment, then run:
+
+```bash
+python main.py
+```
+
+## Screenshots
+
+Application screenshots are available in the `screenshots/` directory.
+
+## Privacy and Connectivity
+
+- Vosk can recognize speech locally after its model has been downloaded.
+- Ollama runs AI models locally after the model download.
+- Google Search requires an internet connection.
+- Initial installation and model downloads require internet access.
+
+Actual connectivity requirements depend on the code paths enabled in your configuration.
+
+## Testing
+
+Run the available automated tests:
+
+```bash
+python -m unittest -v test_commands.py
+```
+
+## Future Improvements
+
+- Expand automated tests for the actual application command handler.
+- Improve error handling and logging.
+- Add configurable commands and settings.
+- Improve offline operation and packaging for Windows.
+
+## License
+
+A license has not been specified yet. Add a `LICENSE` file if you intend to publish the project for reuse by others.
