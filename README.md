@@ -112,4 +112,4 @@ python -m unittest -v test_commands.py
 
 ## License
 
-A license has not been specified yet. Add a `LICENSE` file if you intend to publish the project for reuse by others.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
