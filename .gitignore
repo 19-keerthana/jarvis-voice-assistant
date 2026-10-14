@@ -6,3 +6,5 @@ notes.txt
 build/
 dist/
 *.spec
+# IDE
+.vscode/
